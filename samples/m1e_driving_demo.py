@@ -10,8 +10,8 @@ code.
 
   Demo program that shows some of the driving API for ev3.LargeMotor objects.
     
-Authors: Dave Fisher and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+Authors: Dave Fisher and Pattie Giraldo.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 # ------------------------------------------------------------------
 # TODO: 2
@@ -76,7 +76,8 @@ def turn_90(left_motor, right_motor):
     # Note, that there is no time.sleep needed when using the commands above, but we must add a
     # wait_while command so that the execution of code doesn't get ahead of the robot's physical movements.
     left_motor.wait_while("running")  # Wait for the turn to finish
-    right_motor.wait_while("running")  # (optional) Make sure both motors are done (they finish at the same time)
+    right_motor.wait_while(
+        "running")  # (optional) Make sure both motors are done (they finish at the same time)
     ev3.Sound.beep().wait()  # Fun little beep
 
 
